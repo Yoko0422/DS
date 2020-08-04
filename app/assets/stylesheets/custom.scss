@@ -1,0 +1,123 @@
+html{
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.m-top{
+  margin-top: 5%;  
+}
+
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+.row{
+  .padding{
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* 一覧ページデザイン　*/
+
+.archive {
+  position: relative;
+  margin: 0 0 0 0;
+  border: solid 2px skyblue;
+  }
+
+.archive .title {
+  position: absolute;
+  top: 0;/*画像の左上に配置*/
+  left: 0;
+  margin: 0; /*余計な隙間を除く*/
+  color: white;/*文字を白に*/
+  background: skyblue;/*背景色*/
+  font-size: 20px;
+  line-height: 1;/*行高は1に*/
+  padding: 5px 10px;/*文字周りの余白*/
+  font-weight: bold;
+  }
+
+.archive .name {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 0px; /*余計な隙間を除く*/
+  color: white;/*文字を白に*/
+  background: skyblue;/*背景色*/
+  font-size: 20px;
+  line-height: 1;/*行高は1に*/
+  padding: 5px 10px;/*文字周りの余白*/
+  }
+
+.archive img {
+  width: 100%;
+  height: auto;
+  }
+
+
+/* 投稿ページDS囲み */
+
+blockquote {
+    position: relative;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    font-style: italic;
+    color: #464646;
+    border: solid 3px #72ccf4;
+}
+
+blockquote:before{
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px; /* ●の横幅 */
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    content: "D";
+    font-family: FontAwesome;
+    background: #72ccf4;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+blockquote:after{
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    content: "S";
+    font-family: FontAwesome;
+    background: #72ccf4;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
