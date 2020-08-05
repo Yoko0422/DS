@@ -1,1 +1,15 @@
-    <%= button_to "ログイン", {controller: 'mains', action: 'index'}, {method: :get, class: 'index-b'} %>
+<div class="contaoner">
+  <div class="row">
+    <div class="offset-sm-5 col-sm-2">
+      <% if logged_in? %>
+  <div class="box17 text-center">
+    <%= link_to '一覧ページへ', mains_path %>
+  </div>
+<% else %>
+  <div class="box17 text-center">
+    <%= link_to 'ログイン', login_path %>
+  </div>
+<% end %>
+    </div>
+  </div>
+</div>

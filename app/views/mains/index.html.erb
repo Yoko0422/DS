@@ -1,49 +1,16 @@
 <div class="container">
   <div class="row">
     
-    <div class="col-sm-5 padding">
-      <div class="archive">
-        <%= image_tag 'test.jpg' %>
-        <p class="title">あいうえおあいうえお</p>
-        <p class="name">SUNSET</p>
-      </div>
-    </div>
-    
-    <div class="col-sm-5 padding">
-      <div class="archive">
-        <%= image_tag 'test.jpg' %>
-        <p class="title">SUNSET</p>
-        <p class="name">SUNSET</p>	
-      </div>
-    </div>
-    
-    <div class="col-sm-5 padding">
-      <div class="archive">
-        <%= image_tag 'test.jpg' %>
-        <p class="title">SUNSET</p>
-        <p class="name">SUNSET</p>	
-      </div>
-    </div>
-    
-    <div class="col-sm-5 padding">
-      <div class="archive">
-        <%= image_tag 'test.jpg' %>
-        <p class="title">SUNSET</p>
-        <p class="name">SUNSET</p>	
-      </div>
-    </div>
-    
      <% @mains.each do |main| %>
       <div class="col-sm-5 padding">
-      <div class="archive">
-        <a href="mains/<%= main.id %>">
-         <img src="<%= main.file1 %>">
-        </a>
-        <p class="title"><%= main.text %></p>
-        <p class="name">by.<%= main.name %>　at.<%= main.created_at.to_s(:datetime_jp) %></p>	
+        <div class="archive">
+          <a href="mains/<%= main.id %>">
+           <img src="<%= main.file1 %>">
+          </a>
+          <p class="title"><%= main.title %></p>
+          <p class="name">by.<%= main.name %>　at.<%= main.created_at.to_s(:datetime_jp) %></p>	
+        </div>
       </div>
-    </div>
-    
     <% end %>
   
   </div>

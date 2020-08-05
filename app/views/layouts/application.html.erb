@@ -54,9 +54,24 @@
       <li>
         <%= link_to '使い方', welcomes_howto_path, class: 'nav-link' %>
       </li>
+      <li>　</li>
+       
+       <% if logged_in? %>
+            <li>
+              <%= link_to logout_path, method: :delete do %>
+                <small>ログアウト</small>
+              <% end %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to login_path do %>
+                <small>ログイン</small>
+              <% end %>
+            </li>
+          <% end %>
+          
     </ul>
     </div>
-  
   
   </body>
 </html>
