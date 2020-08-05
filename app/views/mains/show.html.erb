@@ -1,39 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="offset-sm-1 col-sm-10">
+      
+      <blockquote>
+        <h4><%= @main.title %> </h4>
 
-<p>
-  <strong>Title:</strong>
-  <%= @main.title %>
-</p>
+        <div>
+          by.<%= @main.name %> at.<%= @main.created_at.to_s(:datetime_jp) %> Update.<%= @main.updated_at.to_s(:datetime_jp) %>
+        </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @main.name %>
-</p>
+        <hr>
 
-<p>
-  <strong>Text:</strong>
-  <%= @main.text %>
-</p>
+        <div>
+          <%= simple_format(@main.text) %>
+        </div>
+        
+      </blockquote>
 
-<p>
-  <strong>File1:</strong>
-  <%= @main.file1 %>
-</p>
+        <div>
+          <a href="<%= @main.file1 %>"><img src="<%= @main.file1 %>"></a>
+          <a href="<%= @main.file2 %>"><img src="<%= @main.file2 %>"></a>
+          <a href="<%= @main.file3 %>"><img src="<%= @main.file3 %>"></a>
+          <a href="<%= @main.file4 %>"><img src="<%= @main.file4 %>"></a>
+        </div>
+        
+      <%= link_to '編集する', edit_main_path(@main) %> |
+      <%= link_to '一覧ページに戻る', mains_path %> |
+      <%= link_to '削除する', @main, method: :delete, data: { confirm: '削除してよろしですか？' } %>
 
-<p>
-  <strong>File2:</strong>
-  <%= @main.file2 %>
-</p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>File3:</strong>
-  <%= @main.file3 %>
-</p>
-
-<p>
-  <strong>File4:</strong>
-  <%= @main.file4 %>
-</p>
-
-<%= link_to 'Edit', edit_main_path(@main) %> |
-<%= link_to 'Back', mains_path %>
