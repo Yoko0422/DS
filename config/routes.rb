@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :mains
  
   root 'welcome#index'
+  get 'welcomes/howto'
   
   resources :users
   

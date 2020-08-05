@@ -25,9 +25,26 @@ body{
 }
 
 /* ナビバー　*/
-.nav-color{
-  background-color: rgba(25, 104, 183, 0.5);
-}
+
+.menu{
+     background-color: rgba(187, 219, 243, 0.5); 
+     box-shadow:0 2px 8px rgba(30,30,80,.3); /*影。不要なら削除*/
+     right:0;
+     line-height:1;
+     position:fixed;
+     top:50%;
+     z-index:100;
+     padding:1rem;
+     font-size: 30px;
+ }
+ 
+li{
+   list-style-type:	none;
+ }
+
+
+
+
 
 /* トップページボタン　*/
 .index-b{
@@ -65,7 +82,7 @@ body{
 .archive .name {
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  left: 0px;
   margin: 0px; /*余計な隙間を除く*/
   color: white;/*文字を白に*/
   background: #0075C2;/*背景色*/
