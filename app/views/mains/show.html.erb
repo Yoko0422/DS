@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="offset-sm-1 col-sm-10">
-      
+      <% if logged_in? %>
       <blockquote>
         <h4><%= @main.title %> </h4>
 
@@ -27,7 +27,7 @@
       <%= link_to '編集する', edit_main_path(@main) %> |
       <%= link_to '一覧ページに戻る', mains_path %> |
       <%= link_to '削除する', @main, method: :delete, data: { confirm: '削除してよろしですか？' } %>
-
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <% if logged_in? %>
     
      <% @mains.each do |main| %>
       <div class="col-sm-5 padding">
@@ -13,5 +14,6 @@
       </div>
     <% end %>
   
+    <% end %>
   </div>
 </div>

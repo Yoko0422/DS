@@ -32,13 +32,14 @@
 </head>
 
   <body>
-     <% if logged_in? %>
-     
+    
      <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
     
     <%= yield %>
+    
+    <% if logged_in? %>
     
   <div class="menu">
     <p><strong>DS project</strong></p>
@@ -72,7 +73,8 @@
           
     </ul>
     </div>
-  
     <% end %>
+  
+
   </body>
 </html>
