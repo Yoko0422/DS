@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
-    @user.id = current_user.id
     
     if @user.save
       redirect_to mains_path, success: '登録完了'
