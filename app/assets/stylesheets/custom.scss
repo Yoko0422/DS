@@ -1,11 +1,14 @@
 html{
   overflow-x: hidden;
   height: 100%;
+  color: #043C78;
 }
 
-.m-top{
-  margin-top: 5%;  
+body{
+  color: #043C78;
+  margin-top: 5%;
 }
+
 
 .alert {
   margin-bottom: 0px;
@@ -16,31 +19,47 @@ html{
 
 .row{
   .padding{
-    margin-right: 30px;
+    margin-right: 15px;
     margin-bottom: 30px;
   }
 }
 
+/* ナビバー　*/
+.nav-color{
+  background-color: rgba(25, 104, 183, 0.5);
+}
+
+/* トップページボタン　*/
+.index-b{
+　font-size: 20px;
+  font-weight: bold;
+  margin-top: 25%;
+  margin-left: 50%;
+  background-color: #FFFFFF;
+  padding: 5px;
+  border: 8px double #0090bb;
+}
 
 /* 一覧ページデザイン　*/
 
 .archive {
   position: relative;
   margin: 0 0 0 0;
-  border: solid 2px skyblue;
+  border: solid 2px #0075C2;
   }
 
 .archive .title {
   position: absolute;
-  top: 0;/*画像の左上に配置*/
-  left: 0;
-  margin: 0; /*余計な隙間を除く*/
+  top: 0px;/*画像の左上に配置*/
+  left: 0px;
+  margin: 0px; /*余計な隙間を除く*/
   color: white;/*文字を白に*/
-  background: skyblue;/*背景色*/
-  font-size: 20px;
+  background: #0075C2;/*背景色*/
+  font-size: 15px;
   line-height: 1;/*行高は1に*/
   padding: 5px 10px;/*文字周りの余白*/
   font-weight: bold;
+  width: 100%;
   }
 
 .archive .name {
@@ -49,8 +68,8 @@ html{
   right: 0px;
   margin: 0px; /*余計な隙間を除く*/
   color: white;/*文字を白に*/
-  background: skyblue;/*背景色*/
-  font-size: 20px;
+  background: #0075C2;/*背景色*/
+  font-size: 15px;
   line-height: 1;/*行高は1に*/
   padding: 5px 10px;/*文字周りの余白*/
   }
@@ -68,8 +87,8 @@ blockquote {
     padding: 15px 16px;
     box-sizing: border-box;
     font-style: italic;
-    color: #464646;
-    border: solid 3px #72ccf4;
+    color: #043C78;
+    border: solid 3px #0075C2;
 }
 
 blockquote:before{
@@ -85,7 +104,7 @@ blockquote:before{
     text-align: center;
     content: "D";
     font-family: FontAwesome;
-    background: #72ccf4;
+    background: #0075C2;
     color: #FFF;
     font-size: 22px;
     font-weight: 900;
@@ -103,7 +122,7 @@ blockquote:after{
     text-align: center;
     content: "S";
     font-family: FontAwesome;
-    background: #72ccf4;
+    background: #0075C2;
     color: #FFF;
     font-size: 22px;
     font-weight: 900;
@@ -120,4 +139,9 @@ blockquote cite {
     text-align: right;
     color: #888888;
     font-size: 0.9em;
+}
+
+.under {
+  background: linear-gradient(transparent 70%, #a8eaff 50%);
+  font-weight: bold;
 }
