@@ -1,19 +1,19 @@
-<div class="container">
-  <div class="row">
-    <% if logged_in? %>
-    
-      <% @mains.each do |main| %>
-        <div class="col-sm-5 padding">
-          <div class="archive">
-            <a href="mains/<%= main.id %>">
-              <img src="<%= main.file1 %>">
-            </a>
-            <p class="title"><%= main.title %></p>
-            <p class="name">by.<%= main.name %>　at.<%= main.created_at.to_s(:datetime_jp) %></p>	
+<% if logged_in? && current_user.id == 1 %>
+  <div class="container">
+    <div class="row">
+     
+        <% @mains.each do |main| %>
+          <div class="col-sm-5 padding">
+            <div class="archive">
+              <a href="mains/<%= main.id %>">
+                <img src="<%= main.file1 %>">
+              </a>
+              <p class="title"><%= main.title %></p>
+              <p class="name">by.<%= main.name %>　at.<%= main.created_at.to_s(:datetime_jp) %></p>	
+            </div>
           </div>
-        </div>
-      <% end %>
-    
-    <% end %>
+        <% end %>
+      
+    </div>
   </div>
-</div>
+<% end %>

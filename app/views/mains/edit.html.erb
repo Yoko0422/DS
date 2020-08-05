@@ -1,16 +1,16 @@
-<div class="container">
-  <div class="row">
-    <% if logged_in? %>
-      <div class="offset-sm-1 col-sm-10">
-        
-        <blockquote>
-          <%= render 'form', main: @main %>
-        </blockquote>
+<% if logged_in? && current_user.id == 1 %>
+  <div class="container">
+    <div class="row">
+        <div class="offset-sm-1 col-sm-10">
+          
+          <blockquote>
+            <%= render 'form', main: @main %>
+          </blockquote>
+      
+            <%= link_to '詳細ページに戻る', @main %> |
+            <%= link_to '一覧ページに戻る', mains_path %>
     
-          <%= link_to '詳細ページに戻る', @main %> |
-          <%= link_to '一覧ページに戻る', mains_path %>
-  
-      </div>
-    <% end %>
+        </div>
+    </div>
   </div>
 </div>

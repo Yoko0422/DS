@@ -1,34 +1,35 @@
-<div class="container">
-  <div class="row">
-    <div class="offset-sm-1 col-sm-10">
-      <% if logged_in? %>
-      <blockquote>
-        <h4><%= @main.title %> </h4>
-
-        <div>
-          by.<%= @main.name %> at.<%= @main.created_at.to_s(:datetime_jp) %> Update.<%= @main.updated_at.to_s(:datetime_jp) %>
-        </div>
-
-        <hr>
-
-        <div>
-          <%= simple_format(@main.text) %>
-        </div>
-        
-      </blockquote>
-
-        <div>
-          <a href="<%= @main.file1 %>"><img src="<%= @main.file1 %>"></a>
-          <a href="<%= @main.file2 %>"><img src="<%= @main.file2 %>"></a>
-          <a href="<%= @main.file3 %>"><img src="<%= @main.file3 %>"></a>
-          <a href="<%= @main.file4 %>"><img src="<%= @main.file4 %>"></a>
-        </div>
-        
-      <%= link_to '編集する', edit_main_path(@main) %> |
-      <%= link_to '一覧ページに戻る', mains_path %> |
-      <%= link_to '削除する', @main, method: :delete, data: { confirm: '削除してよろしですか？' } %>
-      <% end %>
+<% if logged_in? && current_user.id == 1 %>
+  <div class="container">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10">
+        <% if logged_in? %>
+        <blockquote>
+          <h4><%= @main.title %> </h4>
+  
+          <div>
+            by.<%= @main.name %> at.<%= @main.created_at.to_s(:datetime_jp) %> Update.<%= @main.updated_at.to_s(:datetime_jp) %>
+          </div>
+  
+          <hr>
+  
+          <div>
+            <%= simple_format(@main.text) %>
+          </div>
+          
+        </blockquote>
+  
+          <div>
+            <a href="<%= @main.file1 %>"><img src="<%= @main.file1 %>"></a>
+            <a href="<%= @main.file2 %>"><img src="<%= @main.file2 %>"></a>
+            <a href="<%= @main.file3 %>"><img src="<%= @main.file3 %>"></a>
+            <a href="<%= @main.file4 %>"><img src="<%= @main.file4 %>"></a>
+          </div>
+          
+        <%= link_to '編集する', edit_main_path(@main) %> |
+        <%= link_to '一覧ページに戻る', mains_path %> |
+        <%= link_to '削除する', @main, method: :delete, data: { confirm: '削除してよろしですか？' } %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-
+<% end %>

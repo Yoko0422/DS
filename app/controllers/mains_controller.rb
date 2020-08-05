@@ -5,6 +5,7 @@ class MainsController < ApplicationController
   # GET /mains.json
   def index
     @mains = Main.all
+    @user  = User.all
   end
 
   # GET /mains/1
@@ -28,7 +29,7 @@ class MainsController < ApplicationController
 
     respond_to do |format|
       if @main.save
-        format.html { redirect_to @main, notice: 'Main was successfully created.' }
+        format.html { redirect_to @main, notice: '投稿完了しました' }
         format.json { render :show, status: :created, location: @main }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class MainsController < ApplicationController
   def update
     respond_to do |format|
       if @main.update(main_params)
-        format.html { redirect_to @main, notice: 'Main was successfully updated.' }
+        format.html { redirect_to @main, notice: '編集完了しました.' }
         format.json { render :show, status: :ok, location: @main }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class MainsController < ApplicationController
   def destroy
     @main.destroy
     respond_to do |format|
-      format.html { redirect_to mains_url, notice: 'Main was successfully destroyed.' }
+      format.html { redirect_to mains_url, notice: '削除完了しました' }
       format.json { head :no_content }
     end
   end

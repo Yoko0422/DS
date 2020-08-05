@@ -32,14 +32,12 @@
 </head>
 
   <body>
-    
      <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
     
     <%= yield %>
     
-    <% if logged_in? %>
     
   <div class="menu">
     <p><strong>DS project</strong></p>
@@ -52,12 +50,8 @@
         <%= link_to '資料一覧', mains_path, class: 'nav-link' %>
       </li>
       <li>　</li>
-      <li>
-        <%= link_to '使い方', welcomes_howto_path, class: 'nav-link' %>
-      </li>
-      <li>　</li>
-       
-       <% if logged_in? %>
+    
+        <% if logged_in? && current_user.id == 1 %>
             <li>
               <%= link_to logout_path, method: :delete do %>
                 <small>ログアウト</small>
@@ -69,12 +63,10 @@
                 <small>ログイン</small>
               <% end %>
             </li>
-          <% end %>
+      <% end %>
           
     </ul>
     </div>
-    <% end %>
-  
 
   </body>
 </html>

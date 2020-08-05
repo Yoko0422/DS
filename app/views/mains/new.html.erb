@@ -1,13 +1,15 @@
-<div class="container">
-  <div class="row">
-    <% if logged_in? %>
-      <div class="offset-sm-1 col-sm-10">
-        
-        <blockquote>
-          <%= render 'form', main: @main %>
-        </blockquote>
-        
-      </div>
-    <% end %>
+<% if logged_in? && current_user.id == 1 %>
+  <div class="container">
+    <div class="row">
+      <% if logged_in? %>
+        <div class="offset-sm-1 col-sm-10">
+          
+          <blockquote>
+            <%= render 'form', main: @main %>
+          </blockquote>
+          
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>
